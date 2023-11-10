@@ -4,8 +4,7 @@ import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class HelloImpl extends UnicastRemoteObject implements Hello
-{
+public class HelloImpl extends UnicastRemoteObject implements Hello {
     private final String name;
 
     public HelloImpl(String s) throws RemoteException {
@@ -19,7 +18,7 @@ public class HelloImpl extends UnicastRemoteObject implements Hello
     }
 
     public String sayHello(Personne p) throws RemoteException {
-        return "Hello "+p.getPrénom()+" "+p.getNom();
+        return "Hello " + p.getPrénom() + " " + p.getNom();
     }
 
     public static void main(String[] args) throws Exception {

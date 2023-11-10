@@ -8,13 +8,23 @@ public class PersonneImpl extends UnicastRemoteObject
         implements Personne, Unreferenced {
     private final String nom;
     private final String prénom;
+
     public PersonneImpl(String p, String n) throws RemoteException {
-        super(); prénom = p; nom = n; }
+        super();
+        prénom = p;
+        nom = n;
+    }
+
     public String getNom() throws RemoteException {
-        return nom; }
+        return nom;
+    }
+
     public String getPrénom() throws RemoteException {
-        return prénom; }
+        return prénom;
+    }
+
     public void unreferenced() {
         // utilisé pour libérer des ressources (threads, fichiers…)
+        System.out.println("PersonneImpl: unreferenced()");
     }
 }

@@ -11,7 +11,7 @@ class MonRunnable implements Runnable {
         System.out.println("Je suis le thread " + Thread.currentThread().getName());
     }
 }
-public class Thread1 {
+public class Threads {
     public static void main(String[] args) {
         MonThread thread1 = new MonThread();
         MonThread thread2 = new MonThread();
@@ -35,5 +35,7 @@ public class Thread1 {
         thread5.start();
         thread6.start();
         thread7.start();
+
+        System.out.println("Je suis le thread " + Thread.currentThread().getName());
     }
 }

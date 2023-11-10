@@ -2,7 +2,7 @@ package fr.torguet.threads;
 
 class Compte {
     private double solde;
-    public void deposer(double somme){
+    public synchronized void deposer(double somme){
         double soldeTemp = solde + somme;
         Thread.yield();
         solde = soldeTemp;
@@ -16,11 +16,6 @@ class Compte {
 
 public class Synchronisation {
 
-    class MonThread extends Thread {
-        public void run() {
-            System.out.println("Je suis le thread " + this.getName());
-        }
-    }
 
     public static void main(String[] args) {
         Compte compte = new Compte();

@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deb1b3fa-4954-4a25-b7af-05873b21a35f" name="Changes" comment="Exemples du cours sur les sockets et rmi.">
+    <list default="true" id="deb1b3fa-4954-4a25-b7af-05873b21a35f" name="Changes" comment="Appel au garbage collector et affichage dans unreferenced. Et indentation du code.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MesTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/PinningDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/VirtualThreadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloClnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloClnt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/Personne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/PersonneImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/PersonneImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/ServeurUDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/ServeurUDP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/ThreadPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +33,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hialmar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hialmar/CoursMCPR.git&quot;,
+    &quot;accountId&quot;: &quot;c3d88654-3e7a-460b-ab3e-bd69f8059f6e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2Xte5JNzxxx2hGQHjbnXvtqikMy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,45 +55,39 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ClientTCP.executor": "Run",
+    "Application.ClientUDP.executor": "Run",
+    "Application.Conditions.executor": "Debug",
+    "Application.HelloClnt.executor": "Run",
+    "Application.HelloImpl.executor": "Run",
+    "Application.MesTests.executor": "Run",
+    "Application.PinningDemo.executor": "Run",
+    "Application.Processus.executor": "Run",
+    "Application.ServeurTCP.executor": "Run",
+    "Application.ServeurUDP.executor": "Run",
+    "Application.ThreadPool.executor": "Run",
+    "Application.VirtualThreadDemo.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/torguet/dev/Java/Cours",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.HelloClnt">
-    <configuration name="ClientTCP" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.ClientTCP" />
-      <module name="Cours" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.torguet.sockets.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClientUDP" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.ClientUDP" />
-      <module name="Cours" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fr.torguet.sockets.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HelloClnt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.PinningDemo">
+    <configuration name="HelloClnt" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="fr.torguet.rmi.HelloClnt" />
       <module name="Cours" />
       <extension name="coverage">
@@ -101,12 +113,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServeurUDP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.ServeurUDP" />
+    <configuration name="MesTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MesTests" />
+      <module name="Cours" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PinningDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.threads.PinningDemo" />
       <module name="Cours" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.torguet.sockets.*" />
+          <option name="PATTERN" value="fr.torguet.threads.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VirtualThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.threads.VirtualThreadDemo" />
+      <module name="Cours" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.torguet.threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,21 +147,29 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.PinningDemo" />
+      <item itemvalue="Application.VirtualThreadDemo" />
+      <item itemvalue="Application.MesTests" />
       <item itemvalue="Application.HelloClnt" />
       <item itemvalue="Application.HelloImpl" />
-      <item itemvalue="Application.ClientUDP" />
-      <item itemvalue="Application.ServeurUDP" />
-      <item itemvalue="Application.ClientTCP" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PinningDemo" />
+        <item itemvalue="Application.VirtualThreadDemo" />
         <item itemvalue="Application.HelloClnt" />
         <item itemvalue="Application.HelloImpl" />
-        <item itemvalue="Application.ClientUDP" />
-        <item itemvalue="Application.ServeurUDP" />
-        <item itemvalue="Application.ClientTCP" />
+        <item itemvalue="Application.MesTests" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -139,7 +179,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699452618849</updated>
-      <workItem from="1699452620023" duration="10830000" />
+      <workItem from="1699452620023" duration="12164000" />
+      <workItem from="1700039027883" duration="3692000" />
+      <workItem from="1700131452470" duration="617000" />
+      <workItem from="1701167648345" duration="1473000" />
+      <workItem from="1701264087244" duration="597000" />
+      <workItem from="1731500264953" duration="3133000" />
+      <workItem from="1731585465204" duration="606000" />
+      <workItem from="1731591258405" duration="591000" />
+      <workItem from="1731599059215" duration="62000" />
+      <workItem from="1731678743173" duration="15000" />
+      <workItem from="1732113758791" duration="5813000" />
+      <workItem from="1732178922295" duration="1246000" />
+      <workItem from="1732288319473" duration="1168000" />
+      <workItem from="1732782535483" duration="34000" />
+      <workItem from="1732782584676" duration="27000" />
+      <workItem from="1732782644308" duration="3461000" />
+      <workItem from="1732794393689" duration="609000" />
+      <workItem from="1732880119087" duration="1772000" />
+      <workItem from="1732881959095" duration="58000" />
     </task>
     <task id="LOCAL-00001" summary="Exemples du cours sur les threads.">
       <option name="closed" value="true" />
@@ -157,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699632921187</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Appel au garbage collector et affichage dans unreferenced. Et indentation du code.">
+      <option name="closed" value="true" />
+      <created>1699633204242</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699633204242</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +232,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Exemples du cours sur les threads." />
     <MESSAGE value="Exemples du cours sur les sockets et rmi." />
-    <option name="LAST_COMMIT_MESSAGE" value="Exemples du cours sur les sockets et rmi." />
+    <MESSAGE value="Appel au garbage collector et affichage dans unreferenced. Et indentation du code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Appel au garbage collector et affichage dans unreferenced. Et indentation du code." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Threads.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Threads.java</url>
+          <line>29</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Conditions.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

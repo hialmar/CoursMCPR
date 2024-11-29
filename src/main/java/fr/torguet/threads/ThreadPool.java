@@ -19,9 +19,9 @@ public class ThreadPool {
         }
     }
     public static void main(String[] args) {
-        // ExecutorService pool = Executors.newSingleThreadExecutor();
-        ExecutorService pool = Executors.newFixedThreadPool(10);
-        // ExecutorService pool = Executors.newCachedThreadPool();
+        //ExecutorService pool = Executors.newSingleThreadExecutor();
+        //ExecutorService pool = Executors.newFixedThreadPool(10);
+        ExecutorService pool = Executors.newCachedThreadPool();
 
         for (int i = 0; i < 100; i++){
             Runnable r = new Tache(10);

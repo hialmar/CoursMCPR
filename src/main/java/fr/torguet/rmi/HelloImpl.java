@@ -8,7 +8,7 @@ public class HelloImpl extends UnicastRemoteObject implements Hello {
     private final String name;
 
     public HelloImpl(String s) throws RemoteException {
-        super();
+        super(40000);
         name = s;
     }
 

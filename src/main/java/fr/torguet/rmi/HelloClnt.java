@@ -11,12 +11,12 @@ public class HelloClnt {
             String message = obj.sayHello();
             System.out.println(message);
 
-            for (int i = 0; i < 1000; i++) {
+            //for (int i = 0; i < 1000; i++) {
                 PersonneImpl p = new PersonneImpl("Albert", "Einstein");
                 message = obj.sayHello(p);
                 System.out.println(message);
                 p = null; // force le GC local et le GC réparti
-            }
+            //}
 
             Runtime.getRuntime().gc();
 

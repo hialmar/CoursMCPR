@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deb1b3fa-4954-4a25-b7af-05873b21a35f" name="Changes" comment="Appel au garbage collector et affichage dans unreferenced. Et indentation du code.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MesTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/PinningDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/VirtualThreadDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="deb1b3fa-4954-4a25-b7af-05873b21a35f" name="Changes" comment="Tests bcast, multicast et NIO.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/BcastUDP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/McastRecv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/McastSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/NIOEcho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/as/ListeAuth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Testing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloClnt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloClnt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/HelloImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/PersonneImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/rmi/PersonneImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/ServeurUDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/ServeurUDP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/ThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/autres/MesTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/autres/MesTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/ServeurTCP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/sockets/ServeurTCP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/Timers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/torguet/threads/Timers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,18 +55,39 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BcastUDP.executor": "Run",
     "Application.ClientTCP.executor": "Run",
     "Application.ClientUDP.executor": "Run",
-    "Application.Conditions.executor": "Debug",
+    "Application.Conditions.executor": "Run",
+    "Application.FactorialMain.executor": "Run",
+    "Application.Futures.executor": "Run",
     "Application.HelloClnt.executor": "Run",
     "Application.HelloImpl.executor": "Run",
+    "Application.ListeAuth.executor": "Run",
+    "Application.McastRecv.executor": "Run",
+    "Application.McastSender.executor": "Run",
     "Application.MesTests.executor": "Run",
+    "Application.NIOEcho.executor": "Run",
     "Application.PinningDemo.executor": "Run",
     "Application.Processus.executor": "Run",
     "Application.ServeurTCP.executor": "Run",
     "Application.ServeurUDP.executor": "Run",
+    "Application.Synchronisation.executor": "Run",
     "Application.ThreadPool.executor": "Run",
+    "Application.Threads.executor": "Debug",
+    "Application.Timers.executor": "Run",
     "Application.VirtualThreadDemo.executor": "Run",
+    "JUnit.Testing.executor": "Run",
+    "JUnit.Testing.test.executor": "Run",
+    "JUnit.Testing.test2.executor": "Run",
+    "JUnit.Testing.testCount.executor": "Run",
+    "JUnit.Testing.testForEach.executor": "Run",
+    "JUnit.Testing.testForEachCapturingLambda.executor": "Run",
+    "JUnit.Testing.testForEachCapturingLambda2.executor": "Run",
+    "JUnit.Testing.testForEachMutating.executor": "Run",
+    "JUnit.Testing.testForEachNotCapturingLambda.executor": "Run",
+    "JUnit.Testing.testForEachNotCapturingLambda2.executor": "Run",
+    "JUnit.Testing.testToArray.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -86,13 +107,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.PinningDemo">
-    <configuration name="HelloClnt" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.rmi.HelloClnt" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="fr.torguet.sockets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ClientTCP">
+    <configuration name="BcastUDP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.BcastUDP" />
       <module name="Cours" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.torguet.rmi.*" />
+          <option name="PATTERN" value="fr.torguet.sockets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.rmi.HelloImpl" />
+    <configuration name="ClientTCP" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.ClientTCP" />
       <module name="Cours" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.torguet.rmi.*" />
+          <option name="PATTERN" value="fr.torguet.sockets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,19 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MesTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MesTests" />
-      <module name="Cours" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PinningDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.threads.PinningDemo" />
+    <configuration name="McastRecv" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.McastRecv" />
       <module name="Cours" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.torguet.threads.*" />
+          <option name="PATTERN" value="fr.torguet.sockets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +152,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VirtualThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="fr.torguet.threads.VirtualThreadDemo" />
+    <configuration name="McastSender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.McastSender" />
       <module name="Cours" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="fr.torguet.threads.*" />
+          <option name="PATTERN" value="fr.torguet.sockets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NIOEcho" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fr.torguet.sockets.NIOEcho" />
+      <module name="Cours" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fr.torguet.sockets.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,27 +179,27 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PinningDemo" />
-      <item itemvalue="Application.VirtualThreadDemo" />
-      <item itemvalue="Application.MesTests" />
-      <item itemvalue="Application.HelloClnt" />
-      <item itemvalue="Application.HelloImpl" />
+      <item itemvalue="Application.ClientTCP" />
+      <item itemvalue="Application.NIOEcho" />
+      <item itemvalue="Application.McastRecv" />
+      <item itemvalue="Application.McastSender" />
+      <item itemvalue="Application.BcastUDP" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PinningDemo" />
-        <item itemvalue="Application.VirtualThreadDemo" />
-        <item itemvalue="Application.HelloClnt" />
-        <item itemvalue="Application.HelloImpl" />
-        <item itemvalue="Application.MesTests" />
+        <item itemvalue="Application.ClientTCP" />
+        <item itemvalue="Application.NIOEcho" />
+        <item itemvalue="Application.McastRecv" />
+        <item itemvalue="Application.McastSender" />
+        <item itemvalue="Application.BcastUDP" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -198,6 +230,18 @@
       <workItem from="1732794393689" duration="609000" />
       <workItem from="1732880119087" duration="1772000" />
       <workItem from="1732881959095" duration="58000" />
+      <workItem from="1732882174901" duration="2094000" />
+      <workItem from="1732894426176" duration="1261000" />
+      <workItem from="1733212594195" duration="6726000" />
+      <workItem from="1733305598363" duration="10864000" />
+      <workItem from="1736317941016" duration="6000" />
+      <workItem from="1762323813915" duration="10696000" />
+      <workItem from="1762339772888" duration="1276000" />
+      <workItem from="1762343556172" duration="691000" />
+      <workItem from="1762520374073" duration="613000" />
+      <workItem from="1762773211759" duration="598000" />
+      <workItem from="1762947664841" duration="2852000" />
+      <workItem from="1763562480244" duration="5411000" />
     </task>
     <task id="LOCAL-00001" summary="Exemples du cours sur les threads.">
       <option name="closed" value="true" />
@@ -223,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699633204242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Tests virtualthreads + modifs diverses.">
+      <option name="closed" value="true" />
+      <created>1732882436625</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732882436625</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,28 +285,27 @@
     <MESSAGE value="Exemples du cours sur les threads." />
     <MESSAGE value="Exemples du cours sur les sockets et rmi." />
     <MESSAGE value="Appel au garbage collector et affichage dans unreferenced. Et indentation du code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Appel au garbage collector et affichage dans unreferenced. Et indentation du code." />
+    <MESSAGE value="Tests virtualthreads + modifs diverses." />
+    <MESSAGE value="Tests bcast, multicast et NIO." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests bcast, multicast et NIO." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Threads.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Threads.java</url>
-          <line>29</line>
-          <properties>
-            <option name="lambda-ordinal" value="0" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Conditions.java</url>
           <line>62</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Threads.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fr/torguet/threads/Threads.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -14,7 +14,7 @@ public class Timers {
             }};
 
         Timer timer = new Timer();
-        timer.schedule(afficheTemps, 0, 2000);
+        timer.scheduleAtFixedRate(afficheTemps, 0, 2000);
 
     }
 }

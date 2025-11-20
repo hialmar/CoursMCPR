@@ -98,7 +98,7 @@ public class MesTests {
 
         System.exit(0);
 
-        Stream.Builder<String> builder = Stream.<>builder();
+        Stream.Builder<String> builder = Stream.builder();
 
         builder.add("one")
                 .add("two")
